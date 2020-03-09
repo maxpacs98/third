@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2144ac9d-d57b-44fc-8b6b-2d4d976c4958" name="Default Changelist" comment="" />
+    <list default="true" id="2144ac9d-d57b-44fc-8b6b-2d4d976c4958" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Studenti.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/AppTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YsggrXqVfE5qeFdKHDF0T4Nn5r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,12 +25,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.MainApplication">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AppTest.addStudentIncorrectGroup">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="third" />
@@ -47,8 +66,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.addStudentCorrectGroupOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="third" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
+      <option name="METHOD_NAME" value="addStudentCorrectGroupOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.addStudentIncorrectGroup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="third" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
+      <option name="METHOD_NAME" value="addStudentIncorrectGroup" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.addStudentIncorrectGroup" />
+        <item itemvalue="JUnit.AppTest.addStudentCorrectGroupOk" />
         <item itemvalue="Application.MainApplication" />
         <item itemvalue="Application.App" />
       </list>
@@ -65,6 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583736829398</updated>
       <workItem from="1583736833953" duration="158000" />
+      <workItem from="1583737003369" duration="1718000" />
     </task>
     <servers />
   </component>
@@ -76,22 +130,38 @@
       <screen x="0" y="23" width="1680" height="947" />
     </state>
     <state x="689" y="392" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.947@0.23.1680.947" timestamp="1583736897966" />
-    <state width="1638" height="328" key="GridCell.Tab.0.bottom" timestamp="1583737188352">
+    <state width="1638" height="305" key="GridCell.Tab.0.bottom" timestamp="1583738366485">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1583737188352" />
-    <state width="1638" height="328" key="GridCell.Tab.0.center" timestamp="1583737188350">
+    <state width="1638" height="305" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1583738366485" />
+    <state width="1638" height="305" key="GridCell.Tab.0.center" timestamp="1583738366484">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1583737188350" />
-    <state width="1638" height="328" key="GridCell.Tab.0.left" timestamp="1583737188350">
+    <state width="1638" height="305" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1583738366484" />
+    <state width="1638" height="305" key="GridCell.Tab.0.left" timestamp="1583738366483">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1583737188350" />
-    <state width="1638" height="328" key="GridCell.Tab.0.right" timestamp="1583737188351">
+    <state width="1638" height="305" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1583738366483" />
+    <state width="1638" height="305" key="GridCell.Tab.0.right" timestamp="1583738366484">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state width="1638" height="328" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1583737188351" />
+    <state width="1638" height="305" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1583738366484" />
+    <state width="1638" height="305" key="GridCell.Tab.1.bottom" timestamp="1583738366486">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.bottom/0.23.1680.947@0.23.1680.947" timestamp="1583738366486" />
+    <state width="1638" height="305" key="GridCell.Tab.1.center" timestamp="1583738366486">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.center/0.23.1680.947@0.23.1680.947" timestamp="1583738366486" />
+    <state width="1638" height="305" key="GridCell.Tab.1.left" timestamp="1583738366485">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.left/0.23.1680.947@0.23.1680.947" timestamp="1583738366485" />
+    <state width="1638" height="305" key="GridCell.Tab.1.right" timestamp="1583738366486">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.right/0.23.1680.947@0.23.1680.947" timestamp="1583738366486" />
     <state x="341" y="135" key="SettingsEditor" timestamp="1583736992386">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
