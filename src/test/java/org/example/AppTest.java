@@ -1,8 +1,7 @@
 package org.example;
 
-import static org.junit.Assert.assertTrue;
-
 import domain.Student;
+import domain.Tema;
 import org.junit.Test;
 import repository.NotaXMLRepo;
 import repository.StudentXMLRepo;
@@ -13,7 +12,7 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.ValidationException;
 
-import java.util.Iterator;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
@@ -30,8 +29,6 @@ public class AppTest {
 
     @Test
     public void addStudentCorrectGroup() {
-//        StudentXMLRepo studentXMLRepository = new StudentXMLRepo("fisiere/Studenti.xml");
-//        Service service = new Service()
         StudentValidator studentValidator = new StudentValidator();
         TemaValidator temaValidator = new TemaValidator();
         String filenameStudent = "fisiere/Studenti.xml";
@@ -51,8 +48,6 @@ public class AppTest {
 
     @Test
     public void addStudentIncorrectGroup() {
-//        StudentXMLRepo studentXMLRepository = new StudentXMLRepo("fisiere/Studenti.xml");
-//        Service service = new Service()
         StudentValidator studentValidator = new StudentValidator();
         TemaValidator temaValidator = new TemaValidator();
         String filenameStudent = "fisiere/Studenti.xml";
@@ -77,6 +72,67 @@ public class AppTest {
                 studentCountResult++;
             }
             assert studentCountResult == studentCount;
+        }
+    }
+
+    @Test
+    public void addAssignmentCorrectDeadline() {
+        StudentValidator studentValidator = new StudentValidator();
+        TemaValidator temaValidator = new TemaValidator();
+        String filenameStudent = "fisiere/Studenti.xml";
+        String filenameTema = "fisiere/Teme.xml";
+        String filenameNota = "fisiere/Note.xml";
+
+        StudentXMLRepo studentXMLRepository = new StudentXMLRepo(filenameStudent);
+        TemaXMLRepo temaXMLRepository = new TemaXMLRepo(filenameTema);
+        NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
+        NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
+        Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+
+        Tema tema = new Tema("12923","Tema1", 14, 10);
+        int assCount = 0;
+        for (Tema value : temaXMLRepository.findAll()) {
+            assCount++;
+        }
+        service.addTema(tema);
+        int assCountResult = 0;
+        for (Tema value : temaXMLRepository.findAll()) {
+           assCountResult++;
+        }
+        assert assCount + 1 == assCountResult;
+
+        service.deleteNota("12923");
+    }
+
+    @Test
+    public void addAssignmentIncorrectDeadline() {
+        StudentValidator studentValidator = new StudentValidator();
+        TemaValidator temaValidator = new TemaValidator();
+        String filenameStudent = "fisiere/Studenti.xml";
+        String filenameTema = "fisiere/Teme.xml";
+        String filenameNota = "fisiere/Note.xml";
+
+        StudentXMLRepo studentXMLRepository = new StudentXMLRepo(filenameStudent);
+        TemaXMLRepo temaXMLRepository = new TemaXMLRepo(filenameTema);
+        NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
+        NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
+        Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+
+        Tema tema = new Tema("12923i2","Tema2", 19, 10);
+        int assCount = 0;
+        for (Tema ignored : temaXMLRepository.findAll()) {
+            assCount++;
+        }
+        try {
+            service.addTema(tema);
+        }
+        catch (ValidationException e) {
+            int assCountResult = 0;
+            for (Tema ignored : temaXMLRepository.findAll()) {
+                assCountResult++;
+            }
+            assert assCount == assCountResult;
+            service.deleteNota("12923i2");
         }
     }
 }
