@@ -89,7 +89,7 @@ public class AppTest {
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
 
-        Tema tema = new Tema("1292512","Tema1", 14, 10);
+        Tema tema = new Tema("1292512322","Tema1", 14, 10);
         int assCount = 0;
         for (Tema value : temaXMLRepository.findAll()) {
             assCount++;
@@ -100,7 +100,7 @@ public class AppTest {
            assCountResult++;
         }
         assert assCount + 1 == assCountResult;
-        service.deleteNota("1292512");
+        service.deleteNota("1292512322");
 
     }
 
