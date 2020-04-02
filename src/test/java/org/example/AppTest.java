@@ -61,7 +61,7 @@ public class AppTest {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
-        Student student = new Student("id1", "Mama", -931, "alexandrubodea@gmail.com");
+        Student student = new Student("i2d1", "Mama", -931, "alexandrubodea@gmail.com");
         int studentCount = 0;
         for (Student value : studentXMLRepository.findAll()) {
             studentCount++;
