@@ -42,7 +42,7 @@ public class AppTest {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
-        Student student = new Student("id1", "Mama", 931, "alexandrubodea@gmail.com");
+        Student student = new Student("id162678", "Mama", 931, "alexandrubodea@gmail.com");
 
         Student result = service.addStudent(student);
         assert result.getGrupa() == student.getGrupa();
@@ -202,7 +202,7 @@ public class AppTest {
 
     @Test
     public void addStudentNotUnique() {
-        Student student = new Student("01234", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        Student student = new Student("1", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
         try {
             service.addStudent(student);
             assert false;
