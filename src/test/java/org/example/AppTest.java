@@ -2,6 +2,7 @@ package org.example;
 
 import domain.Student;
 import domain.Tema;
+import org.junit.Before;
 import org.junit.Test;
 import repository.NotaXMLRepo;
 import repository.StudentXMLRepo;
@@ -21,6 +22,7 @@ public class AppTest {
     /**
      * Rigorous Test :-)
      */
+    private Service service;
 
     @Test
     public void shouldAnswerWithTrue() {
@@ -135,4 +137,139 @@ public class AppTest {
             service.deleteNota("12923i2");
         }
     }
+
+    @Before
+    public void setUp() {
+        StudentValidator studentValidator = new StudentValidator();
+        TemaValidator temaValidator = new TemaValidator();
+        String filenameStudent = "fisiere/Studenti.xml";
+        String filenameTema = "fisiere/Teme.xml";
+        String filenameNota = "fisiere/Note.xml";
+
+        StudentXMLRepo studentXMLRepository = new StudentXMLRepo(filenameStudent);
+        TemaXMLRepo temaXMLRepository = new TemaXMLRepo(filenameTema);
+        NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
+        NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
+        this.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+    }
+
+    @Test
+    public void addValidStudentRedundant() {
+        Student student = new Student("1199", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        Student res = service.addStudent(student);
+        assert student == res;
+    }
+
+    @Test
+    public void addValidStudent() {
+        Student student = new Student("2829i6", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        int studentCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            studentCount++;
+        }
+        service.addStudent(student);
+
+        int resultCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            resultCount++;
+        }
+        assert resultCount == studentCount + 1;
+    }
+
+    @Test
+    public void addStudentEmptyId() {
+        Student student = new Student("", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Id incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentNullId() {
+        Student student = new Student(null, "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Id incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentNotUnique() {
+        Student student = new Student("01234", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Id not unique");
+        }
+    }
+
+    @Test
+    public void addStudentEmptyName() {
+        Student student = new Student("1111", "", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Nume incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentNullName() {
+        Student student = new Student("1111", null, 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Nume incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentNullEmail() {
+        Student student = new Student("1111", "Bodea Alexandru", 931, null);
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Email incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentEmptyEmail() {
+        Student student = new Student("11211", "Bodea Alexandru", 931, "");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Email incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentInvalidEmail() {
+        Student student = new Student("11211", "Bodea Alexandru", 931, "invalid.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Email is of incorrect form!");
+        }
+    }
+
 }

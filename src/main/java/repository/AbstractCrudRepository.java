@@ -55,7 +55,6 @@ public abstract class AbstractCrudRepository <ID, E extends HasID<ID>> implement
             return null;
         }
         else return entity;
-
     }
 
     /**

@@ -76,6 +76,7 @@ public abstract class AbstractFileRepository<ID, E extends HasID<ID>> extends Ab
         E entity1 = super.save(entity);
         if (entity1 == null) {
             saveToFile(entity);
+
         }
 
         return entity1;

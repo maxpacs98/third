@@ -60,7 +60,11 @@ public class Service {
      */
     public Student addStudent(Student student) {
         studentValidator.validate(student);
-        return studentFileRepository.save(student);
+        if(studentFileRepository.findOne(student.getID()) != null) {
+            // TODO: Added this here
+            throw new ValidationException("Id not unique");
+        }
+        return studentFileRepository.save(student) == null ? student : null;
     }
 
     /**
