@@ -72,7 +72,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.addStudentIncorrectGroup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.addStudentInvalidIdLengthUpper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="third" />
       <extension name="coverage">
         <pattern>
@@ -82,13 +82,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="addStudentIncorrectGroup" />
+      <option name="METHOD_NAME" value="addStudentInvalidIdLengthUpper" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.addStudentNullId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.addStudentInvalidNameCharacters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="third" />
       <extension name="coverage">
         <pattern>
@@ -98,13 +98,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="addStudentNullId" />
+      <option name="METHOD_NAME" value="addStudentInvalidNameCharacters" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.addStudentValidIdLengthFix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="third" />
       <extension name="coverage">
         <pattern>
@@ -114,7 +114,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
+      <option name="METHOD_NAME" value="addStudentValidIdLengthFix" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,10 +123,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.addStudentNullId" />
-        <item itemvalue="JUnit.AppTest.addStudentIncorrectGroup" />
         <item itemvalue="JUnit.AppTest.addStudentCorrectGroup" />
-        <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
+        <item itemvalue="JUnit.AppTest.addStudentInvalidNameCharacters" />
+        <item itemvalue="JUnit.AppTest.addStudentInvalidIdLengthUpper" />
+        <item itemvalue="JUnit.AppTest.addStudentValidIdLengthFix" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,7 @@
       <workItem from="1583737003369" duration="2845000" />
       <workItem from="1584875668357" duration="1813000" />
       <workItem from="1584944189842" duration="2160000" />
-      <workItem from="1585903403345" duration="1685000" />
+      <workItem from="1585903403345" duration="4236000" />
     </task>
     <servers />
   </component>
@@ -164,46 +164,46 @@
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state x="168" y="106" key="DiffContextDialog/0.23.1680.949@0.23.1680.949" timestamp="1585905071266" />
-    <state width="1638" height="278" key="GridCell.Tab.0.bottom" timestamp="1585905150456">
+    <state width="1638" height="377" key="GridCell.Tab.0.bottom" timestamp="1585908532196">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1585846805234" />
-    <state width="1638" height="278" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1585905150456" />
-    <state width="1638" height="278" key="GridCell.Tab.0.center" timestamp="1585905150455">
+    <state width="1638" height="377" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1585908532196" />
+    <state width="1638" height="377" key="GridCell.Tab.0.center" timestamp="1585908532195">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1585846805233" />
-    <state width="1638" height="278" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1585905150455" />
-    <state width="1638" height="278" key="GridCell.Tab.0.left" timestamp="1585905150455">
+    <state width="1638" height="377" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1585908532195" />
+    <state width="1638" height="377" key="GridCell.Tab.0.left" timestamp="1585908532195">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1585846805233" />
-    <state width="1638" height="278" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1585905150455" />
-    <state width="1638" height="278" key="GridCell.Tab.0.right" timestamp="1585905150456">
+    <state width="1638" height="377" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1585908532195" />
+    <state width="1638" height="377" key="GridCell.Tab.0.right" timestamp="1585908532196">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1585846805234" />
-    <state width="1638" height="278" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1585905150456" />
-    <state width="1638" height="304" key="GridCell.Tab.1.bottom" timestamp="1585905101545">
+    <state width="1638" height="377" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1585908532196" />
+    <state width="1638" height="304" key="GridCell.Tab.1.bottom" timestamp="1585908301023">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.1.bottom/0.23.1680.947@0.23.1680.947" timestamp="1585846805235" />
-    <state width="1638" height="304" key="GridCell.Tab.1.bottom/0.23.1680.949@0.23.1680.949" timestamp="1585905101545" />
-    <state width="1638" height="304" key="GridCell.Tab.1.center" timestamp="1585905101544">
+    <state width="1638" height="304" key="GridCell.Tab.1.bottom/0.23.1680.949@0.23.1680.949" timestamp="1585908301023" />
+    <state width="1638" height="304" key="GridCell.Tab.1.center" timestamp="1585908301022">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.1.center/0.23.1680.947@0.23.1680.947" timestamp="1585846805234" />
-    <state width="1638" height="304" key="GridCell.Tab.1.center/0.23.1680.949@0.23.1680.949" timestamp="1585905101544" />
-    <state width="1638" height="304" key="GridCell.Tab.1.left" timestamp="1585905101544">
+    <state width="1638" height="304" key="GridCell.Tab.1.center/0.23.1680.949@0.23.1680.949" timestamp="1585908301022" />
+    <state width="1638" height="304" key="GridCell.Tab.1.left" timestamp="1585908301021">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.1.left/0.23.1680.947@0.23.1680.947" timestamp="1585846805234" />
-    <state width="1638" height="304" key="GridCell.Tab.1.left/0.23.1680.949@0.23.1680.949" timestamp="1585905101544" />
-    <state width="1638" height="304" key="GridCell.Tab.1.right" timestamp="1585905101545">
+    <state width="1638" height="304" key="GridCell.Tab.1.left/0.23.1680.949@0.23.1680.949" timestamp="1585908301021" />
+    <state width="1638" height="304" key="GridCell.Tab.1.right" timestamp="1585908301022">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.1.right/0.23.1680.947@0.23.1680.947" timestamp="1585846805235" />
-    <state width="1638" height="304" key="GridCell.Tab.1.right/0.23.1680.949@0.23.1680.949" timestamp="1585905101545" />
+    <state width="1638" height="304" key="GridCell.Tab.1.right/0.23.1680.949@0.23.1680.949" timestamp="1585908301022" />
     <state x="656" y="214" key="RollbackChangesDialog" timestamp="1585905072589">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
@@ -217,26 +217,5 @@
     </state>
     <state x="517" y="329" key="com.intellij.ide.util.TipDialog/0.23.1680.947@0.23.1680.947" timestamp="1584944189872" />
     <state x="517" y="330" key="com.intellij.ide.util.TipDialog/0.23.1680.949@0.23.1680.949" timestamp="1585903404900" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/service/Service.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/service/Service.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/AppTest.java</url>
-          <line>196</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

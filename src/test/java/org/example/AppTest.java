@@ -274,4 +274,76 @@ public class AppTest {
         }
     }
 
+    @Test
+    public void addStudentValidIdLengthLowerLimit() {
+        String id = UUID.randomUUID().toString() + "123";
+        Student student = new Student(id, "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        int studentCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            studentCount++;
+        }
+        service.addStudent(student);
+
+        int resultCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            resultCount++;
+        }
+        assert resultCount == studentCount + 1;
+    }
+
+    @Test
+    public void addStudentValidIdLengthFix() {
+        String id = UUID.randomUUID().toString() + "1234";
+        Student student = new Student(id, "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        int studentCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            studentCount++;
+        }
+        service.addStudent(student);
+
+        int resultCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            resultCount++;
+        }
+        assert resultCount == studentCount + 1;
+    }
+
+    @Test
+    public void addStudentInvalidIdLengthUpper() {
+        String id = UUID.randomUUID().toString() + "12345";
+        Student student = new Student(id, "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Id incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentInvalidNameNumbers() {
+        String id = UUID.randomUUID().toString();
+        Student student = new Student(id, "Bodea Alexandru 12", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Nume incorect!");
+        }
+    }
+
+    @Test
+    public void addStudentInvalidNameCharacters() {
+        String id = UUID.randomUUID().toString();
+        Student student = new Student(id, "Alex @#^!", 931, "alexandrubodeag@gmail.com");
+        try {
+            service.addStudent(student);
+            assert false;
+        }
+        catch (ValidationException e) {
+            assert e.getMessage().equals("Nume incorect!");
+        }
+    }
 }

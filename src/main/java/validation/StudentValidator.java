@@ -21,10 +21,13 @@ public class StudentValidator implements Validator<Student> {
         if(entity.getID().equals("")){
             throw new ValidationException("Id incorect!");
         }
+        if(entity.getID().length() > 40){
+            throw new ValidationException("Id incorect!");
+        }
         if(entity.getNume() == null){
             throw new ValidationException("Nume incorect!");
         }
-        if(entity.getNume().equals("")){
+        if(!entity.getNume().matches("^[a-zA-Z ]+$")){
             throw new ValidationException("Nume incorect!");
         }
         if(entity.getGrupa() < 0) {
