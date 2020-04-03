@@ -13,6 +13,8 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.ValidationException;
 
+import java.util.UUID;
+
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -26,6 +28,7 @@ public class AppTest {
 
     @Test
     public void shouldAnswerWithTrue() {
+        System.out.println(UUID.randomUUID().toString());
         assertTrue(true);
     }
 
@@ -42,8 +45,7 @@ public class AppTest {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
-        Student student = new Student("id162678", "Mama", 931, "alexandrubodea@gmail.com");
-
+        Student student = new Student(UUID.randomUUID().toString(), "Mama", 931, "alexandrubodea@gmail.com");
         Student result = service.addStudent(student);
         assert result.getGrupa() == student.getGrupa();
     }
@@ -61,7 +63,7 @@ public class AppTest {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
-        Student student = new Student("i2d1", "Mama", -931, "alexandrubodea@gmail.com");
+        Student student = new Student(UUID.randomUUID().toString(), "Mama", -931, "alexandrubodea@gmail.com");
         int studentCount = 0;
         for (Student value : studentXMLRepository.findAll()) {
             studentCount++;
@@ -91,7 +93,7 @@ public class AppTest {
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
 
-        Tema tema = new Tema("1292512322","Tema1", 14, 10);
+        Tema tema = new Tema(UUID.randomUUID().toString(),"Tema1", 14, 10);
         int assCount = 0;
         for (Tema value : temaXMLRepository.findAll()) {
             assCount++;
@@ -120,7 +122,7 @@ public class AppTest {
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         Service service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
 
-        Tema tema = new Tema("12923i2","Tema2", 19, 10);
+        Tema tema = new Tema(UUID.randomUUID().toString(),"Tema2", 19, 10);
         int assCount = 0;
         for (Tema ignored : temaXMLRepository.findAll()) {
             assCount++;
@@ -155,14 +157,14 @@ public class AppTest {
 
     @Test
     public void addValidStudentRedundant() {
-        Student student = new Student("1199", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
         Student res = service.addStudent(student);
         assert student == res;
     }
 
     @Test
     public void addValidStudent() {
-        Student student = new Student("2829i6", "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
         int studentCount = 0;
         for (Student ignored : service.getAllStudenti()) {
             studentCount++;
@@ -214,7 +216,7 @@ public class AppTest {
 
     @Test
     public void addStudentEmptyName() {
-        Student student = new Student("1111", "", 931, "alexandrubodeag@gmail.com");
+        Student student = new Student(UUID.randomUUID().toString(), "", 931, "alexandrubodeag@gmail.com");
         try {
             service.addStudent(student);
             assert false;
@@ -226,7 +228,7 @@ public class AppTest {
 
     @Test
     public void addStudentNullName() {
-        Student student = new Student("1111", null, 931, "alexandrubodeag@gmail.com");
+        Student student = new Student(UUID.randomUUID().toString(), null, 931, "alexandrubodeag@gmail.com");
         try {
             service.addStudent(student);
             assert false;
@@ -238,7 +240,7 @@ public class AppTest {
 
     @Test
     public void addStudentNullEmail() {
-        Student student = new Student("1111", "Bodea Alexandru", 931, null);
+        Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, null);
         try {
             service.addStudent(student);
             assert false;
@@ -250,7 +252,7 @@ public class AppTest {
 
     @Test
     public void addStudentEmptyEmail() {
-        Student student = new Student("11211", "Bodea Alexandru", 931, "");
+        Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, "");
         try {
             service.addStudent(student);
             assert false;
@@ -262,7 +264,7 @@ public class AppTest {
 
     @Test
     public void addStudentInvalidEmail() {
-        Student student = new Student("11211", "Bodea Alexandru", 931, "invalid.com");
+        Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, "invalid.com");
         try {
             service.addStudent(student);
             assert false;
