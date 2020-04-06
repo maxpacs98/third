@@ -116,13 +116,13 @@ public class IntegrationTesting {
 
         long resultCountNota = 0;
         long resultCountStudent = 0;
-        long resultCountTema = 0;
+        long resultCountTem = 0;
 
         for (Nota ignored : service.getAllNote()) {
             resultCountNota++;
         }
         for (Tema ignored : service.getAllTeme()) {
-            resultCountTema++;
+            resultCountTem++;
         }
         for (Student ignored : service.getAllStudenti()) {
             resultCountStudent++;
@@ -130,7 +130,7 @@ public class IntegrationTesting {
 
         assert resultCountNota == gradeCount + 1;
         assert resultCountStudent == studentCount + 1;
-        assert resultCountTema == assCount + 1;
+        assert resultCountTem == assCount + 1;
 
     }
 }
