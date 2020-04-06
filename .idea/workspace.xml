@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2144ac9d-d57b-44fc-8b6b-2d4d976c4958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Wbt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/IntegrationTesting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Note.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Studenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fisiere/Teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fisiere/Teme.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validation/TemaValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validation/TemaValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,70 @@
       <recent name="$PROJECT_DIR$/src/main/java/org/example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Wbt">
+  <component name="RunManager" selected="JUnit.IntegrationTesting">
+    <configuration name="IntegrationTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="third" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.IntegrationTesting" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTesting.BigBangIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="third" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.IntegrationTesting" />
+      <option name="METHOD_NAME" value="BigBangIntegration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTesting.addValidAssignmentIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="third" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.IntegrationTesting" />
+      <option name="METHOD_NAME" value="addValidAssignmentIntegration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTesting.addValidGradeIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="third" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.IntegrationTesting" />
+      <option name="METHOD_NAME" value="addValidGradeIntegration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Wbt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="third" />
       <extension name="coverage">
@@ -62,77 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Wbt.addAssignmentInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="third" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Wbt" />
-      <option name="METHOD_NAME" value="addAssignmentInvalidId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Wbt.addAssignmentInvalidReceivingDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="third" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Wbt" />
-      <option name="METHOD_NAME" value="addAssignmentInvalidReceivingDate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Wbt.addExistingAssignment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="third" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Wbt" />
-      <option name="METHOD_NAME" value="addExistingAssignment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Wbt.addValidAssignment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="third" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Wbt" />
-      <option name="METHOD_NAME" value="addValidAssignment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTesting" />
+        <item itemvalue="JUnit.IntegrationTesting.BigBangIntegration" />
+        <item itemvalue="JUnit.IntegrationTesting.addValidGradeIntegration" />
+        <item itemvalue="JUnit.IntegrationTesting.addValidAssignmentIntegration" />
         <item itemvalue="JUnit.Wbt" />
-        <item itemvalue="JUnit.Wbt.addAssignmentInvalidId" />
-        <item itemvalue="JUnit.Wbt.addExistingAssignment" />
-        <item itemvalue="JUnit.Wbt.addValidAssignment" />
-        <item itemvalue="JUnit.Wbt.addAssignmentInvalidReceivingDate" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +150,8 @@
       <workItem from="1584875668357" duration="1813000" />
       <workItem from="1584944189842" duration="2160000" />
       <workItem from="1585903403345" duration="5341000" />
-      <workItem from="1585999014086" duration="5353000" />
+      <workItem from="1585999014086" duration="5882000" />
+      <workItem from="1586149745001" duration="942000" />
     </task>
     <servers />
   </component>
@@ -171,30 +171,30 @@
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state x="168" y="106" key="DiffContextDialog/0.23.1680.949@0.23.1680.949" timestamp="1585905071266" />
-    <state width="1638" height="263" key="GridCell.Tab.0.bottom" timestamp="1586015886498">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom" timestamp="1586150921212">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1585846805234" />
-    <state width="1638" height="304" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1585909640273" />
-    <state width="1638" height="263" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1586015886498" />
-    <state width="1638" height="263" key="GridCell.Tab.0.center" timestamp="1586015886497">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1586150921212" />
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1586017792892" />
+    <state width="1638" height="324" key="GridCell.Tab.0.center" timestamp="1586150921212">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1585846805233" />
-    <state width="1638" height="304" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1585909640273" />
-    <state width="1638" height="263" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1586015886497" />
-    <state width="1638" height="263" key="GridCell.Tab.0.left" timestamp="1586015886497">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1638" height="324" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1586150921212" />
+    <state width="1638" height="324" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1586017792891" />
+    <state width="1638" height="324" key="GridCell.Tab.0.left" timestamp="1586150921211">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1585846805233" />
-    <state width="1638" height="304" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1585909640272" />
-    <state width="1638" height="263" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1586015886497" />
-    <state width="1638" height="263" key="GridCell.Tab.0.right" timestamp="1586015886498">
-      <screen x="0" y="23" width="1680" height="952" />
+    <state width="1638" height="324" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1586150921211" />
+    <state width="1638" height="324" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1586017792890" />
+    <state width="1638" height="324" key="GridCell.Tab.0.right" timestamp="1586150921212">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1638" height="332" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1585846805234" />
-    <state width="1638" height="304" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1585909640273" />
-    <state width="1638" height="263" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1586015886498" />
+    <state width="1638" height="324" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1586150921212" />
+    <state width="1638" height="324" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1586017792891" />
     <state width="1638" height="304" key="GridCell.Tab.1.bottom" timestamp="1585909640274">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
@@ -223,14 +223,22 @@
       <screen x="0" y="23" width="1680" height="947" />
     </state>
     <state x="341" y="135" key="SettingsEditor/0.23.1680.947@0.23.1680.947" timestamp="1583736992386" />
-    <state x="517" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1585999015465">
+    <state x="517" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1586149746237">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state x="517" y="329" key="com.intellij.ide.util.TipDialog/0.23.1680.947@0.23.1680.947" timestamp="1584944189872" />
-    <state x="517" y="330" key="com.intellij.ide.util.TipDialog/0.23.1680.949@0.23.1680.949" timestamp="1585999015465" />
-    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1585999397750">
+    <state x="517" y="330" key="com.intellij.ide.util.TipDialog/0.23.1680.949@0.23.1680.949" timestamp="1586149746237" />
+    <state x="498" y="253" width="683" height="486" key="find.popup" timestamp="1586150425463">
       <screen x="0" y="23" width="1680" height="949" />
     </state>
-    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup/0.23.1680.949@0.23.1680.949" timestamp="1585999397750" />
+    <state x="498" y="253" width="683" height="486" key="find.popup/0.23.1680.949@0.23.1680.949" timestamp="1586150425463" />
+    <state x="602" y="119" key="refactoring.ChangeSignatureDialog" timestamp="1586150365042">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state x="602" y="119" key="refactoring.ChangeSignatureDialog/0.23.1680.949@0.23.1680.949" timestamp="1586150365042" />
+    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1586150407193">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup/0.23.1680.949@0.23.1680.949" timestamp="1586150407193" />
   </component>
 </project>
