@@ -18,7 +18,7 @@ import java.util.UUID;
 
 import static org.junit.Assert.assertTrue;
 
-public class IntegrationTesting {
+public class TopDownIntegration {
     Service service;
 
     @Test
@@ -42,22 +42,6 @@ public class IntegrationTesting {
     }
 
     @Test
-    public void addValidAssignmentIntegration() {
-        Tema tema = new Tema(UUID.randomUUID().toString(), "Descriere valida", 13, 10);
-        int assCount = 0;
-        for (Tema ignored : service.getAllTeme()) {
-            assCount++;
-        }
-        service.addTema(tema);
-
-        int resultCount = 0;
-        for (Tema ignored : service.getAllTeme()) {
-            resultCount++;
-        }
-        assert resultCount == assCount + 1;
-    }
-
-    @Test
     public void addValidStudentIntegration() {
         Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
         int studentCount = 0;
@@ -74,35 +58,61 @@ public class IntegrationTesting {
     }
 
     @Test
-    public void addValidGradeIntegration() {
-        Nota nota = new Nota(UUID.randomUUID().toString(), "1002", "6", 8, LocalDate.of(2020, 4, 20));
-        int gradeCount = 0;
-        for (Nota ignored : service.getAllNote()) {
-            gradeCount++;
+    public void addAssignmentIntegration() {
+        Student student = new Student(UUID.randomUUID().toString(), "Birladeanu Horea", 931, "birladeanuhorea@hotmail.com");
+        int studentCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            studentCount++;
         }
-
-        service.addNota(nota, "feedback");
+        service.addStudent(student);
 
         int resultCount = 0;
-        for (Nota ignored : service.getAllNote()) {
+        for (Student ignored : service.getAllStudenti()) {
             resultCount++;
         }
-        assert resultCount == gradeCount + 1;
-    }
+        assert resultCount == studentCount + 1;
 
-    @Test
-    public void BigBangIntegration() {
         Tema tema = new Tema(UUID.randomUUID().toString(), "Descriere valida", 13, 10);
         int assCount = 0;
         for (Tema ignored : service.getAllTeme()) {
             assCount++;
         }
+        service.addTema(tema);
 
-        Student student = new Student(UUID.randomUUID().toString(), "Bodea Alexandru", 931, "alexandrubodeag@gmail.com");
+        int resultCountTema = 0;
+        for (Tema ignored : service.getAllTeme()) {
+            resultCountTema++;
+        }
+        assert resultCountTema == assCount + 1;
+    }
+
+    @Test
+    public void addGradeIntegration() {
+        Student student = new Student(UUID.randomUUID().toString(), "Birladeanu Horea", 931, "birladeanuhorea@hotmail.com");
         int studentCount = 0;
         for (Student ignored : service.getAllStudenti()) {
             studentCount++;
         }
+        service.addStudent(student);
+
+        int resultCount = 0;
+        for (Student ignored : service.getAllStudenti()) {
+            resultCount++;
+        }
+        assert resultCount == studentCount + 1;
+
+        Tema tema = new Tema(UUID.randomUUID().toString(), "Descriere valida", 13, 10);
+        int assCount = 0;
+        for (Tema ignored : service.getAllTeme()) {
+            assCount++;
+        }
+        service.addTema(tema);
+
+        int resultCountTema = 0;
+        for (Tema ignored : service.getAllTeme()) {
+            resultCountTema++;
+        }
+        assert resultCountTema == assCount + 1;
 
         Nota nota = new Nota(UUID.randomUUID().toString(), student.getID(), tema.getID(), 8, LocalDate.of(2020, 4, 20));
         int gradeCount = 0;
@@ -110,26 +120,15 @@ public class IntegrationTesting {
             gradeCount++;
         }
 
-        service.addStudent(student);
-        service.addTema(tema);
         service.addNota(nota, "early");
 
         long resultCountNota = 0;
-        long resultCountStudent = 0;
-        long resultCountTem = 0;
 
         for (Nota ignored : service.getAllNote()) {
             resultCountNota++;
         }
-        for (Tema ignored : service.getAllTeme()) {
-            resultCountTem++;
-        }
-        for (Student ignored : service.getAllStudenti()) {
-            resultCountStudent++;
-        }
 
         assert resultCountNota == gradeCount + 1;
-        assert resultCountStudent == studentCount + 1;
-        assert resultCountTem == assCount + 1;
     }
+
 }
